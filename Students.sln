@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudendsDB", "StudendsDB\StudendsDB.csproj", "{25372C6E-107F-4F24-B65A-C8CDC3650AED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudendsView", "StudendsView\StudendsView.csproj", "{A5684E7A-B4F1-4FBD-966E-E12663A1795E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25372C6E-107F-4F24-B65A-C8CDC3650AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25372C6E-107F-4F24-B65A-C8CDC3650AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25372C6E-107F-4F24-B65A-C8CDC3650AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25372C6E-107F-4F24-B65A-C8CDC3650AED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5684E7A-B4F1-4FBD-966E-E12663A1795E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5684E7A-B4F1-4FBD-966E-E12663A1795E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5684E7A-B4F1-4FBD-966E-E12663A1795E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5684E7A-B4F1-4FBD-966E-E12663A1795E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,110 @@
+﻿    <!DOCTYPE HTML>
+   <register tagprefix="uc1" tagname="StudnetControl" src="~/StudentController.ascx" %>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.5.4/css/demo_table.css" />
+    </head>
+    <body>
+        <link href="buttons.css" rel="stylesheet" />
+        <table id="studends" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>DOB</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>DOB</th>
+                </tr>
+            </tfoot>
+
+        </table>
+        <script>
+
+            function format(d) {
+                return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+                    '<tr>' +
+                        '<td>Name:</td>' +
+                        '<td>' + d.Semester.Name + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                        '<td>StartDate:</td>' +
+                        '<td>' + d.Semester.StartDate + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                        '<td>EndDate:</td>' +
+                       '<td>' + d.Semester.EndDate + '</td>' +
+                    '</tr>' +
+                   '<tr>' +
+                        '<td>Scores:</td>' +
+                    '</tr>' +
+                     '<tr>' +
+                        '<td>DisciplineName:</td>' +
+                        '<td>' + d.Semester.Scores[0].DisciplineName + '</td>' +
+                        '<td>ProfessorName:</td>' +
+                        '<td>' + d.Semester.Scores[0].ProfessorName + '</td>' +
+                        '<td>Score:</td>' +
+                        '<td>' + d.Semester.Scores[0].Score + '</td>' +
+                    '</tr>' +
+               '</table>';
+            }
+
+            $(document).ready(function () {
+                var table = $('#studends').DataTable({
+                    "ajaxSource": "ajax/data/objects1.txt",
+                   // "proccessing": true,
+                   // "serverSide": true,
+                   // "ajax": {
+                   //     url: Callback.GetJason(),
+                   // type: 'POST'
+                //},
+                    "columns": [
+                {
+                            "className": 'details-control',
+                "orderable": false,
+                "data": null,
+                "defaultContent": ''
+            },
+
+                        { "data": "Id" },
+                        { "data": "Name" },
+                        { "data": "Surname" },
+                        { "data": "DOB" }
+            ],
+
+            "order": [[1, 'asc']]
+            });
+
+            $('#studends tbody').on('click', 'td.details-control', function () {
+
+                var tr = $(this).closest('tr');
+                var row = table.row(tr);
+
+                if (row.child.isShown()) {
+                    row.child.hide();
+                    tr.removeClass('shown');
+                }
+                else {
+                    row.child(format(row.data())).show();
+                    tr.addClass('shown');
+                }
+
+            });
+
+            });
+
+        </script>
+
+    </body>
+</html>

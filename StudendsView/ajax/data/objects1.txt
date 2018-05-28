@@ -1,0 +1,57 @@
+{
+
+    "data": [
+
+        {
+
+            "Id": "1",
+
+            "Name": "Peter",
+
+            "Surname": "Smith",
+
+            "DOB": "1/1/1990",
+
+            "Semester" :{
+
+                                                  "Name": "Semester 1",
+
+                                                  "StartDate": "11/09/2015",
+
+                                                  "EndDate": "03/03/2016",
+
+               "Scores" :[
+
+                                                                                                              { "DisciplineName": "Math",
+
+                                                                                                                "ProfessorName": "Einstein",
+
+                                                                                                                "Score":"4"},
+
+                                                                                                              { "DisciplineName": "Biology",
+
+                                                                                                                "ProfessorName": "Darwin",
+
+                                                                                                                "Score":"5"}
+
+                                                                                              ]                                                                            
+
+                      }        
+
+        },
+
+{
+
+            "Id": "2",
+
+            "Name": "Jonh",
+
+            "Surname": "Doe",
+
+            "DOB": "1/1/1990"
+
+        }
+
+    ]
+
+}
